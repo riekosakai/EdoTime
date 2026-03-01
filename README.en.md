@@ -7,6 +7,16 @@ EdoTime is an iOS app that visualizes the current time using the traditional Jap
 Instead of fixed-length hours, daytime and nighttime are each divided into six equal segments based on **sunrise and sunset**.
 The app shows which segment the current time falls into and how much time remains until the next segment.
 
+## Why Edo Time?
+
+Modern clocks assume that every hour has a fixed length.
+In contrast, during the Edo period in Japan, time was measured using a **temporal hour system**, where daytime and nighttime were each divided into six equal segments based on sunrise and sunset.
+
+EdoTime aims to visualize this alternative sense of time in a modern context.
+By linking time to natural phenomena rather than fixed units, the app invites users to reconsider time not as an absolute constant, but as something shaped by environment and daily rhythm.
+
+This project is not a historical reconstruction alone, but a tool for re-experiencing the present moment through a different temporal framework.
+
 ## Overview
 
 - Calculates sunrise and sunset for the current location (or manual fallback)
