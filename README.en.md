@@ -44,9 +44,3 @@ This project is not a historical reconstruction alone, but a tool for re-experie
 
 This project is under active development.
 Features and UI may change.
-
----
-
-## License
-
-MIT License
