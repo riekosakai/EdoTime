@@ -1,17 +1,13 @@
-//
-//  EdoTimeApp.swift
-//  EdoTime
-//
-//  Created by RiekoSakai on 2026/03/01.
-//
-
 import SwiftUI
 
 @main
 struct EdoTimeApp: App {
+
+    @StateObject private var viewModel = AppViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(viewModel: viewModel)
         }
     }
 }
