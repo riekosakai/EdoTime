@@ -1,5 +1,22 @@
 import SwiftUI
 
+struct TimelineScreen: View {
+    @ObservedObject var viewModel: AppViewModel
+
+    var body: some View {
+        ScrollView {
+            if let snapshot = viewModel.snapshot {
+                TimelineViewPanel(snapshot: snapshot, now: viewModel.now)
+                    .padding()
+            } else {
+                Text("データを表示できません")
+                    .padding()
+            }
+        }
+        .navigationTitle("タイムライン")
+    }
+}
+
 struct TimelineViewPanel: View {
     let snapshot: EdoTimeSnapshot
     let now: Date

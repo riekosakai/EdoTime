@@ -3,9 +3,26 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel: AppViewModel
 
+    // 今日の日付文字列
+    private var todayString: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.dateFormat = "yyyy年M月d日（E）"
+        return formatter.string(from: viewModel.now)
+    }
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 16) {
+
+                // 👇 ここが追加した日付表示
+                // 👇 日付（目立つ版）
+                Text(todayString)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
                 VStack(alignment: .leading, spacing: 8) {
                     Text("地点: \(viewModel.locationName)")
                     Text("日の出: \(viewModel.sunriseText)")
@@ -47,22 +64,5 @@ struct HomeView: View {
             .padding()
             .navigationTitle("江戸時間")
         }
-    }
-}
-
-struct TimelineScreen: View {
-    @ObservedObject var viewModel: AppViewModel
-
-    var body: some View {
-        ScrollView {
-            if let snapshot = viewModel.snapshot {
-                TimelineViewPanel(snapshot: snapshot, now: viewModel.now)
-                    .padding()
-            } else {
-                Text("データを表示できません")
-                    .padding()
-            }
-        }
-        .navigationTitle("タイムライン")
     }
 }
