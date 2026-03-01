@@ -18,9 +18,9 @@
 - 📊 昼夜の配分をタイムラインで可視化
 - 📍 位置情報取得（失敗時は手動地点にフォールバック）
 
-## スクリーンショット
+## Screenshots
 
-（ここに後でスクリーンショットを追加予定）
+![Home Screen](screenshots/screenshot-home.png)
 
 ## 技術スタック
 
