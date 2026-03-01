@@ -1,3 +1,5 @@
+[🇯🇵 日本語](README.md) | [🇺🇸 English](README.en.md)
+
 # EdoTime (江戸時間)
 
 EdoTime is an iOS app that visualizes the current time using the traditional Japanese **Edo-period temporal hour system**.
